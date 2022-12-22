@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>tidy-revealjs demo</title>
+    <meta name="description" content="A custom theme and build system for reveal.js">
+    <meta name="author" content="Julie Ng">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/vendor/revealjs/css/reset.css">
+    <link rel="stylesheet" href="assets/vendor/revealjs/css/reveal.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="assets/vendor/prism-monokai.css">
+
+    <!-- Tidy Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'assets/vendor/revealjs/css/print/pdf.css' : 'assets/vendor/revealjs/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+        <section class="section-title">
+            <h1>Vorstellung Elektronik</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/HTL_Steyr_Logo.jpg" class="center" style="width: 300px">
+
+        </section>
+        <section data-markdown="slides/1.md" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/2.md" data-separator-notes="^Note:"></section>
+        <section>
+            <section class="section-title" data-background-image="./images/example-stil-vdaJJbls3xE-unsplash.jpg">
+                <span class="section-number">1</span>
+                <h1>Wahlfächer ab 4 Jahrgang</h1>
+                <h2>Multimedia Systeme & Web IT</h2>
+                <h2>Energiemanagment & Green IT</h2>
+            </section>
+            <section data-markdown="slides/wahlfaecher/multimedia.md" data-separator-notes="^Note:"></section>
+            <section data-markdown="slides/wahlfaecher/energiemanagment.md" data-separator-notes="^Note:"></section>
+        </section>
+        <section data-markdown="slides/elektroniker.md" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/karrierewege.md" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/projekte.md" data-separator-notes="^Note:"></section>
+    </div>
+</div>
+
+<script src="assets/vendor/revealjs/reveal.js"></script>
+<script>
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: false,
+        hash: true,
+        history: true,
+        width: 1280,
+        height: 720,
+        margin: 0.1,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {
+                src: 'assets/vendor/revealjs/plugin/markdown/marked.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            },
+            {
+                src: 'assets/vendor/revealjs/plugin/markdown/markdown.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            },
+            // { src: 'assets/vendor/revealjs/plugin/highlight/highlight.js', async: true },
+            // { src: 'assets/vendor/revealjs/plugin/search/search.js', async: true },
+            // { src: 'assets/vendor/revealjs/plugin/zoom-js/zoom.js', async: true },
+            {src: 'assets/vendor/revealjs/plugin/notes/notes.js', async: true},
+            {src: 'assets/vendor/revealjs/plugin/notes-server/client.js', async: true},
+            {src: 'assets/vendor/prism.js', async: true}
+            // { src: 'https://platform.twitter.com/widgets.js', async: true }
+        ]
+    })
+</script>
+</body>
+</html>
